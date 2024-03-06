@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const schema = mongoose.Schema;
 
-const userschema = new schema({
+const prodschema = new schema({
   sellerid: {
     type: String,
     required: true,
@@ -60,4 +60,4 @@ const userschema = new schema({
   },
 });
 
-module.exports = mongoose.model("User", userschema);
+module.exports = mongoose.model("Products", prodschema);
