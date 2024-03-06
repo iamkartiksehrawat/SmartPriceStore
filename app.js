@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.use("/", (req, res) => {
-  res.send("haha");
+  res.render("index.ejs");
 });
 
 app.listen(3000);
