@@ -204,14 +204,25 @@ body {
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  background-color: var(--bg-gainsboro);
+  background-color: white;
+  display: flex; /* Add Flexbox container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   overflow: hidden;
+  border-radius: 50px;
 }
 
 .img-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50px;
+}
+.hero .img-cover{
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra spacing around the image */
+  margin: 0 auto;
 }
 
 .section {
@@ -366,8 +377,9 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  background-color: var(--bg-wild-blue-yonder);
+  background-image: "i";
   padding-block: 130px 75px;
+  background-color:  var(--bg-gainsboro);
 }
 
 .hero .container {
