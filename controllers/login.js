@@ -11,7 +11,7 @@ exports.postdata = (req, res) => {
     .then((arr) => {
       if (!arr) {
         console.log("No user  found!");
-        res.redirect("/");
+        res.render("login.ejs");
       } else {
         bcrypt
           .compare(formdata.password, arr.password)
@@ -22,7 +22,7 @@ exports.postdata = (req, res) => {
               res.render("index.ejs", { isauth: true });
             } else {
               console.log("wrong password");
-              res.redirect("/");
+              res.render("login.ejs");
             }
           })
           .catch((err) => {

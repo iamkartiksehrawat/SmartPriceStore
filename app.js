@@ -10,6 +10,8 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const auth = require("./middlewares/auth.js");
 const profile = require("./routes/profile.js");
+const shop = require("./routes/shop.js");
+const addprod = require("./routes/addprod.js");
 const mongodbstore = require("connect-mongodb-session")(session);
 const app = express();
 
@@ -45,6 +47,10 @@ app.use("/login", login);
 app.use("/signin", signin);
 
 app.use("/profile", auth, profile);
+
+app.use("/shop", auth, shop);
+
+app.use("/addprod", auth, addprod);
 
 /// LISTEN & DATABASE CONNECTION
 

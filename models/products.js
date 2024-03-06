@@ -4,7 +4,19 @@ const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
 const userschema = new schema({
-  name: {
+  sellerid: {
+    type: String,
+    required: true,
+  },
+  prodname: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  imageurl: {
     type: String,
     required: true,
   },
@@ -17,13 +29,34 @@ const userschema = new schema({
     required: true,
   },
   ram: {
-    type: String,
+    type: Number,
   },
   weight: {
-    type: String,
+    type: Number,
   },
   os: {
     type: String,
+  },
+  gpu: {
+    type: String,
+  },
+  touchscreen: {
+    type: String,
+  },
+  ips: {
+    type: String,
+  },
+  harddrive: {
+    type: Number,
+  },
+  ssd: {
+    type: Number,
+  },
+  screenresolution: {
+    type: Number,
+  },
+  screensize: {
+    type: Number,
   },
 });
 

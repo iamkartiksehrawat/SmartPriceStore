@@ -15,7 +15,7 @@ exports.postdata = async function (req, res) {
       password: hashedpassword,
     });
     let arr = await p.save();
-    res.redirect("/");
+    res.render("login.ejs");
   } catch (err) {
     console.log(err);
     throw err;
