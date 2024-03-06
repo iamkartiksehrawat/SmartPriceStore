@@ -18,7 +18,8 @@ exports.postdata = (req, res) => {
           .then((val) => {
             if (val) {
               req.session.isauth = true;
-              res.redirect("/");
+              req.session.user = arr;
+              res.render("index.ejs", { isauth: true });
             } else {
               console.log("wrong password");
               res.redirect("/");

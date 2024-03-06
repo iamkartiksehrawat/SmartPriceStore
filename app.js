@@ -8,6 +8,7 @@ const signin = require("./routes/signin.js");
 const bodyparser = require("body-parser");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
+const auth = require("./middlewares/auth.js");
 const mongodbstore = require("connect-mongodb-session")(session);
 const app = express();
 
@@ -41,6 +42,8 @@ app.use("/", index);
 app.use("/login", login);
 
 app.use("/signin", signin);
+
+app.use("/profile", auth, profile);
 
 /// LISTEN & DATABASE CONNECTION
 

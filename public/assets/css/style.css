@@ -350,6 +350,10 @@ body {
   padding: 10px 20px;
 }
 
+.navv {
+  padding-top: 10px;
+}
+
 .cart-btn {
   display: flex;
   align-items: center;
@@ -675,10 +679,6 @@ address.footer-text {
   /**
    * HEADER
    */
-
-  .header {
-    padding-block: 0;
-  }
 
   .header .container {
     border-block-end: 2px solid var(--border-eerie-black);

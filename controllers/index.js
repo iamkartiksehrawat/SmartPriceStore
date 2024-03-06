@@ -1,5 +1,9 @@
 exports.getpage = (req, res) => {
-  res.render("index.ejs");
+  console.log(req.session);
+  let auth = req.session ? req.session.isauth : false;
+  res.render("index.ejs", {
+    isauth: auth,
+  });
 };
 
 exports.postdata = (req, res) => {
