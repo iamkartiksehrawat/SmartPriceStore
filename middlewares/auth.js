@@ -1,6 +1,7 @@
-module.exports = (req, res) => {
+module.exports = (req, res, next) => {
   if (req.session.isauth) {
     next();
+  } else {
+    res.redirect("/login");
   }
-  res.redirect("/login");
 };

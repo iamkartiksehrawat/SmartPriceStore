@@ -9,6 +9,7 @@ const bodyparser = require("body-parser");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const auth = require("./middlewares/auth.js");
+const profile = require("./routes/profile.js");
 const mongodbstore = require("connect-mongodb-session")(session);
 const app = express();
 
