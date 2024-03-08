@@ -26,7 +26,6 @@ exports.postdata = async (req, res) => {
   });
   try {
     let arr = await p.save();
-    console.log(arr);
     res.render("index.ejs");
   } catch (err) {
     console.log(err);

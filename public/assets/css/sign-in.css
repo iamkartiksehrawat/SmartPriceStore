@@ -7,23 +7,33 @@
 
 /* Global styles for the body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f4f4f4; /* Light gray background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-color: #a6c5d8;
 }
 
-/* Style for the form container */
-.form-signin {
+/* Style for the login form container */
+form {
   max-width: 400px;
-  margin: 20px auto;
-  background-color: #fff;
+  margin: 0 auto;
+  background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  box-shadow: 11px 11px 0px -1px rgba(0, 0, 0, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 550;
+  margin: 20px 0px 20px 0px;
 }
 
 /* Style for form labels */
@@ -34,36 +44,26 @@ label {
 
 /* Style for form inputs */
 input {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+}
+
+input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 /* Style for the submit button */
 button {
-  background-color: #4caf50;
+  background-color: #1f4ee8;
   color: #fff;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
-}
-
-/* Style for the logo */
-.logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo img {
-  width: 100%; /* Make the logo responsive within its container */
-  height: auto;
-  max-width: 200px; /* Set a max-width to control the logo size */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

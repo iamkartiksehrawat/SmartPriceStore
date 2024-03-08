@@ -16,17 +16,15 @@ const prodschema = new schema({
     type: Number,
     required: true,
   },
-  imageurl: {
+  produrl: {
     type: String,
     required: true,
   },
   brand: {
     type: String,
-    required: true,
   },
   type: {
     type: String,
-    required: true,
   },
   ram: {
     type: Number,
