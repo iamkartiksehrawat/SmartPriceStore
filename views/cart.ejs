@@ -3,17 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/cart.css" />
   </head>
   <body>
-    <%if(products.length==0){%>
-    <h1>Cart is Empty !!</h1>
-    <%}%>
-
-    <%for(let i=0;i<products.length;i++){%>
-      <%= products[i].prodname %>
-      <%= products[i].quantity %>
-      <%}%>
-      
+    <div class="cart-container">
+      <div class="products">
+        <div class="prod-header">My Cart</div>
+        <div class="header-para">
+          Check your cart items before proceeding ahead.
+        </div>
+        <ul>
+          <% for(let i=0; i<products.length;i++) {%>
+          <li>
+            <div class="image-container">
+              <img src=<%= products[i].prodId.produrl %> alt="Product image" />
+            </div>
+            <div class="product-info">
+              <div class="prod-name"><%= products[i].prodId.prodname %></div>
+              <div class="prod-quanity"><span>Quanity : </span><%= products[i].quantity %></div>
+              <div class="prod-price"><span>Price : </span><%= products[i].prodId.price %></div>
+            </div>
+          </li>
+          <%}%>
+          <!-- Add more product items as needed -->
+        </ul>
+      </div>
+      <div class="cart-summary">
+        <h2>Total</h2>
+        <p>Total Price: $<span id="total">10</span></p>
+        <button>Proceed to Pay</button>
+      </div>
+    </div>
   </body>
 </html>

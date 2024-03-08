@@ -8,9 +8,11 @@ const cartschema = new schema({
   userID: { type: String, required: true },
   products: [
     {
-      prodId: { type: String, required: true },
-      prodname: { type: String, required: true },
-      produrl: { type: String, required: true },
+      prodId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "Products",
+      },
       quantity: { type: Number, required: true },
     },
   ],

@@ -22,7 +22,6 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-app.use("/", index);
 app.set("views", "views");
 app.set("view engine", "ejs");
 
@@ -42,8 +41,6 @@ app.use(
 
 //ROUTES
 
-app.use("/", index);
-
 app.use("/login", login);
 
 app.use("/signin", signin);
@@ -57,6 +54,8 @@ app.use("/shop", auth, shop);
 app.use("/addprod", auth, addprod);
 
 app.use("/addtocart", auth, addtocart);
+
+app.use("/", index);
 
 /// LISTEN & DATABASE CONNECTION
 

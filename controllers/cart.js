@@ -1,13 +1,19 @@
 const Cart = require("../models/cart.js");
+const products = require("../models/products.js");
 
 exports.getpage = async (req, res) => {
   let usrid = req.session.user._id;
-  let arr = await Cart.find({ userID: usrid });
-  console.log(arr);
-  if (arr.length == 0) {
-    res.render("cart.ejs", { products: [] });
+  try {
+    let arr = await Cart.findOne({ userID: usrid }).populate("products.prodId");
+    if (!arr) {
+      res.render("cart.ejs", { products: [] });
+    } else {
+      res.render("cart.ejs", { products: arr.products });
+    }
+  } catch (err) {
+    console.log(err);
+    throw err;
   }
-  res.render("cart.ejs", { products: arr[0].products });
 };
 
 exports.postdata = (req, res) => {
