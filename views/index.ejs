@@ -49,7 +49,7 @@
 
     <header class="header navv" data-header>
       <div class="container">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <img
             src="./assets/images/logo.svg"
             width="132"
@@ -61,7 +61,7 @@
         <nav class="navbar" data-navbar>
           <ul class="navbar-list">
             <li>
-              <a href="#" class="navbar-link">Home</a>
+              <a href="/" class="navbar-link">Home</a>
             </li>
             <li>
               <a href="#" class="navbar-link">Search</a>
@@ -71,7 +71,10 @@
               <a href="/shop" class="navbar-link">My Shop</a>
             </li>
             <li>
-              <a href="/cart" class="navbar-link">Cart</a>
+              <a href="/cart" class="cart-container">
+                <img src="/assets/images/cart.svg" class="cart-icon" />
+                <div class="navbar-link">Cart(<%=cartlen%>)</div>
+              </a>
             </li>
             <li>
               <a href="/profile" class="navbar-link"

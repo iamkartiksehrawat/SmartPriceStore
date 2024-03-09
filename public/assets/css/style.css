@@ -341,7 +341,11 @@ body {
 }
 
 .navbar-list {
-  padding-block-start: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 25px;
 }
 
 .navbar-link,
@@ -350,24 +354,25 @@ body {
   text-transform: uppercase;
 }
 
-.navbar-link {
-  padding: 10px 20px;
-}
-
 .navv {
   padding-top: 10px;
-}
-
-.cart-btn {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 25px 20px;
 }
 
 .user-logo {
   width: 25px;
   height: 25px;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /*-----------------------------------*\
@@ -703,11 +708,6 @@ address.footer-text {
     all: unset;
     display: flex;
     align-items: center;
-  }
-
-  .navbar-list {
-    padding-block-start: 0;
-    display: flex;
   }
 
   .cart-btn {
